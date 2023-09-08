@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/main_Black"
+tools:context=".MainActivity">
+
+<TextView
+    android:id="@+id/welcome"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_35sdp"
+    android:fontFamily="@font/sulphur_point"
+    android:text="Welcome!"
+    android:textColor="@color/white"
+    android:textSize="@dimen/_35sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/Slogen"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/sulphur_point_bold"
+    android:paddingTop="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_25sdp"
+    android:text="UNLEASH YOUR PRODUCTIVITY WITH"
+    android:textColor="#8A8484"
+    android:textSize="@dimen/_13sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="WorkEfi"
+    android:textColor="#8A8484"
+    android:layout_marginLeft="@dimen/_25sdp"
+    android:fontFamily="@font/glorify"
+    android:textSize="@dimen/_17sdp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/Slogen"
+
+    />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/inter_semibold"
+    android:text="Your\nDashboard"
+    android:textColor="@color/white"
+    android:textSize="@dimen/_15sdp"
+    android:layout_marginStart="@dimen/_27sdp"
+    android:layout_marginBottom="@dimen/_13sdp"
+    app:layout_constraintBottom_toTopOf="@id/background_ractangle"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/background_ractangle"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_450sdp"
+    android:background="@drawable/ractangle"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/Drinking_water_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_Color"
+    app:layout_constraintTop_toTopOf="@id/background_ractangle"
+    app:cardCornerRadius="@dimen/_14sdp"
+    android:layout_margin="@dimen/_13sdp"
+    android:padding="@dimen/_12sdp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_Color"
+        android:padding="@dimen/_10sdp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/dw_ll"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DrinkingWater_Heading"
+                android:fontFamily="@font/inter_bold"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From : 12 : 15 PM"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/_9sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To :      11 : 30 PM"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/_9sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interval : 02 Hrs 30 Min"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/_9sdp"/>
+        </LinearLayout>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:track="@drawable/custom_toggle"
+            android:thumb="@drawable/thumb"
+            android:layout_gravity="center"
+            android:scaleX="1.25"
+            android:scaleY="1.25"
+
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    android:id="@+id/pomodoro_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_Color"
+    app:layout_constraintTop_toBottomOf="@id/Drinking_water_card"
+    app:cardCornerRadius="@dimen/_14sdp"
+    android:layout_margin="@dimen/_13sdp"
+    android:padding="@dimen/_12sdp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_Color"
+        android:padding="@dimen/_10sdp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/pt_ll"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Pomodoro_Heading"
+                android:fontFamily="@font/inter_bold"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Time : 04 Hrs 30 Min"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/_9sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat Time :  25 Min"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/_9sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Break Time : 05 Min"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/_9sdp"/>
+        </LinearLayout>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:track="@drawable/custom_toggle"
+            android:thumb="@drawable/thumb"
+            android:layout_gravity="center"
+            android:scaleX="1.25"
+            android:scaleY="1.25"
+            android:checked="true"
+
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    android:id="@+id/twenty_rule_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_Color"
+    app:layout_constraintTop_toBottomOf="@id/pomodoro_card"
+    app:cardCornerRadius="@dimen/_14sdp"
+    android:layout_margin="@dimen/_13sdp"
+    android:padding="@dimen/_12sdp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_Color"
+        android:padding="@dimen/_10sdp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/tr_ll"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TwentyRule_Heading"
+                android:fontFamily="@font/inter_bold"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From :  --"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/_9sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To :      --"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/_9sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interval : --"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textColor="#A3A3A3"
+                android:textSize="@dimen/_9sdp"/>
+        </LinearLayout>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:track="@drawable/custom_toggle"
+            android:thumb="@drawable/thumb"
+            android:layout_gravity="center"
+            android:scaleX="1.25"
+            android:scaleY="1.25"
+
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
